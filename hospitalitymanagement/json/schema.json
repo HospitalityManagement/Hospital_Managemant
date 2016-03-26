@@ -1,0 +1,112 @@
+1)Tenant Request and Response 
+Request
+	
+{
+	"tenantId": "Apo1234",
+	"tenantName": "Apollo",
+	"tenantPassword": "password",
+	"tenantEmailId": "apollo@gmail.com",
+	"tenantAddress": "Hydrabad",
+	"tenantMobileNumber": 8095583091
+}
+
+Response	
+
+{
+	"status": "OK"
+}
+
+2)Login 
+Request
+
+{
+	"email": "apollo@gmail.com",
+	"password": "password"
+}
+
+Response
+{
+	"roleName": "admin",
+	"email": "apollo@gmail.com",
+	"tenantId": "apol1234"
+}
+
+3)Department 
+Request
+{
+	"departmentName": "SKIN",
+	"tenantId": "apol123"
+}
+Response
+{
+	"status": "OK"
+}
+
+4)Doctor
+Request
+
+{
+	"doctorName": "Laxmikanth",
+	"doctorEmail": "laxmikanth@gmail.com",
+	"doctorPassword": "password",
+	"doctorMobileNumber": 8095583091,
+	"department ": {
+		"departmentName": "SKIN",
+		"tenantId": "apol123"
+	},
+	"DoctorDetails": {
+		"collegeName": "MrMc",
+		"university": "Rajiv gandhi",
+		"experienceDetailsList": [{
+			"hospitalName ": "Mrmc",
+			"description ": "good hospital"
+		}, {
+			"hospitalName ": "Kbn",
+			"description ": "ok ok"
+		}],
+		"qualification": "Mbbs"
+	},
+	"tenantId": "apol123"
+
+}
+
+Response
+{
+	"status": "OK"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
