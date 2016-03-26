@@ -1,5 +1,5 @@
 package com.company.hospitalitymanagement.entity;
 
 public class Tenant {
-//sari 4
+//sari 4 nanda
 }
