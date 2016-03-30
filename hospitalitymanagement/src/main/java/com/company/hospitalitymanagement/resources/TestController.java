@@ -5,6 +5,7 @@ package com.company.hospitalitymanagement.resources;
 
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.company.hospitalitymanagement.dao.TenantDao;
 import com.company.hospitalitymanagement.entity.Tenant;
+import com.company.hospitalitymanagement.serviceImpl.TenantServiceImpl;
 
 /**
  * @author sari
@@ -22,7 +25,14 @@ import com.company.hospitalitymanagement.entity.Tenant;
 @Controller
 public class TestController
 {
-
+	
+	
+	@Autowired
+	private TenantServiceImpl tenantServiceImpl;
+	
+	@Autowired
+	private TenantDao tenantDao;
+	
 	@RequestMapping("/")
 	public ModelAndView getIndexPage()
 	{
@@ -59,7 +69,11 @@ public class TestController
 	@RequestMapping(value = "/savetenant", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON)
 	public ResponseEntity<Tenant> saveTenant(@RequestBody Tenant tenant)
 	{
+		
 		System.out.println(tenant);
+		
+		tenantServiceImpl.saveTenant(tenant);
+		
 		return new ResponseEntity<Tenant>(tenant, HttpStatus.OK);
 
 	}

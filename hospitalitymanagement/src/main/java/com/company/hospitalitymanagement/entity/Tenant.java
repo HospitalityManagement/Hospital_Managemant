@@ -1,13 +1,34 @@
 package com.company.hospitalitymanagement.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TENANT")
 public class Tenant {
 //sari 4 nanda
 	
+	@Id
+	@Column(name="TENANT_ID")
 	private String tenantId;
+	
+	@Column(name="TENANT_NAME", nullable=false)
 	private String tenantName;
+	
+	@Column(name="TENANT_PASSWORD", nullable=false)
 	private String tenantPassword;
+	
+	@Column(name="TENANT_EMAIL_ID", nullable=false)
 	private String tenantEmailId;
+	
+	@Column(name="TENANT_ADDRESS", nullable=false)
 	private String tenantAddress;
+	
+	@Column(name="TENANT_MOBILE_NUMBER", nullable=false)
 	private long tenantMobileNumber;
 	
 	public Tenant(){

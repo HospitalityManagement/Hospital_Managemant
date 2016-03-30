@@ -1,5 +1,9 @@
 package com.company.hospitalitymanagement.entity;
 
+/**
+ * @author M1030758
+ *
+ */
 public class Address {
 
 	private String doctorId;
