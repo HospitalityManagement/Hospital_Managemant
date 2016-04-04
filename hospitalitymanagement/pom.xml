@@ -73,6 +73,8 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.11.Final</version>
 		</dependency>
+		
+		
 
 	</dependencies>
 	<build>
